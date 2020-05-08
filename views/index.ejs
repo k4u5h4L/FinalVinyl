@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>FinalVinyl</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="FinalVinyl" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="images/site-logo.png" />
+        <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css" />
+        <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css" />
+        <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css" />
+        <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css" />
+        <link rel="stylesheet" type="text/css" href="styles/main_styles.css" />
+        <link rel="stylesheet" type="text/css" href="styles/responsive.css" />
+        <link rel="stylesheet" href="styles/icon.css" />
+    </head>
+    <body>
+        <div class="super_container">
+            <!-- Header -->
+
+            <%- include("partials/navbar"); -%>
+
+            <!-- Menu -->
+
+            <!--<div class="menu menu_mm trans_300">
+                <div class="menu_container menu_mm">
+                    <div class="page_menu_content">
+                        <div class="page_menu_search menu_mm">
+                            <form action="#" method="POST">
+                                <input
+                                    type="search"
+                                    required="required"
+                                    class="page_menu_search_input menu_mm"
+                                    placeholder="Search for products..."
+                                />
+                            </form>
+                        </div>
+                        <ul class="page_menu_nav menu_mm">
+                            <li class="page_menu_item has-children menu_mm">
+                                <a href="index.html">Home<i class="fa fa-angle-down"></i></a>
+                                <ul class="page_menu_selection menu_mm">
+                                    <li class="page_menu_item menu_mm">
+                                        <a href="categories.html"
+                                            >Categories<i class="fa fa-angle-down"></i
+                                        ></a>
+                                    </li>
+                                    <li class="page_menu_item menu_mm">
+                                        <a href="product.html">Product<i class="fa fa-angle-down"></i></a>
+                                    </li>
+                                    <li class="page_menu_item menu_mm">
+                                        <a href="cart.html">Cart<i class="fa fa-angle-down"></i></a>
+                                    </li>
+                                    <li class="page_menu_item menu_mm">
+                                        <a href="checkout.html">Checkout<i class="fa fa-angle-down"></i></a>
+                                    </li>
+                                    <li class="page_menu_item menu_mm">
+                                        <a href="contact.html">Contact<i class="fa fa-angle-down"></i></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="page_menu_item has-children menu_mm">
+                                <a href="categories.html">Categories<i class="fa fa-angle-down"></i></a>
+                                <ul class="page_menu_selection menu_mm">
+                                    <li class="page_menu_item menu_mm">
+                                        <a href="categories.html">Category<i class="fa fa-angle-down"></i></a>
+                                    </li>
+                                    <li class="page_menu_item menu_mm">
+                                        <a href="categories.html">Category<i class="fa fa-angle-down"></i></a>
+                                    </li>
+                                    <li class="page_menu_item menu_mm">
+                                        <a href="categories.html">Category<i class="fa fa-angle-down"></i></a>
+                                    </li>
+                                    <li class="page_menu_item menu_mm">
+                                        <a href="categories.html">Category<i class="fa fa-angle-down"></i></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="page_menu_item menu_mm">
+                                <a href="index.html">Accessories<i class="fa fa-angle-down"></i></a>
+                            </li>
+                            <li class="page_menu_item menu_mm">
+                                <a href="#">Offers<i class="fa fa-angle-down"></i></a>
+                            </li>
+                            <li class="page_menu_item menu_mm">
+                                <a href="contact.html">Contact<i class="fa fa-angle-down"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="menu_close"><i class="fa fa-times" aria-hidden="true"></i></div>
+
+                <div class="menu_social">
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>-->
+
+            <!-- Home -->
+
+            <div class="home">
+                <div class="home_slider_container">
+                    <!-- Home Slider -->
+
+                    <%- include("partials/slideshow") %>
+
+                    <!-- Home Slider Dots -->
+
+                    <div class="home_slider_dots_container">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="home_slider_dots">
+                                        <ul id="home_slider_custom_dots" class="home_slider_custom_dots">
+                                            <li class="home_slider_custom_dot active">01.</li>
+                                            <li class="home_slider_custom_dot">02.</li>
+                                            <li class="home_slider_custom_dot">03.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ads -->
+
+            <div class="avds">
+                <div
+                    class="avds_container d-flex flex-lg-row flex-column align-items-start justify-content-between"
+                >
+                    <div class="avds_small">
+                        <div class="avds_background" style="background-image: url(images/bose1.jpg);"></div>
+                        <div class="avds_small_inner">
+                            <div class="avds_discount_container">
+                                <img src="images/discount.png" alt="" />
+                                <div>
+                                    <div class="avds_discount">
+                                        <div>15<span>%</span></div>
+                                        <div>Discount</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="avds_small_content">
+                                <div class="avds_title" style="background-color: rgba(0, 0, 0, 0.5);">
+                                    Bose
+                                </div>
+                                <div class="avds_link" style="background-color: rgba(0, 0, 0, 0.5);">
+                                    <a href="categories.html">See More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="avds_large">
+                        <div class="avds_background" style="background-image: url(images/beats1.jpg);"></div>
+                        <div class="avds_large_container">
+                            <div class="avds_large_content">
+                                <div class="avds_title">Beats</div>
+                                <div class="avds_text">
+                                    Explore one of the most recognisable and popular headphone brand on the
+                                    market today.
+                                </div>
+                                <div class="avds_link avds_link_large">
+                                    <a href="categories.html">See More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products -->
+
+            <div class="products">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="product_grid">
+                                <!-- Product -->
+                                <div class="product">
+                                    <div class="product_image">
+                                        <img
+                                            src="https://cdn.shopify.com/s/files/1/0153/8863/products/beats-by-dre-solo-pro-black-headphone-zone-13980035219519_2000x.jpg?v=1579706821"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <%- include("partials/sale") %>
+                                    <div class="product_content">
+                                        <div class="product_title">
+                                            <a href="product.html">Beats Solo Pro</a>
+                                        </div>
+                                        <div class="product_price">$670</div>
+                                    </div>
+                                </div>
+
+                                <!-- Product -->
+                                <div class="product">
+                                    <div class="product_image">
+                                        <img
+                                            src="https://cdn.shopify.com/s/files/1/0153/8863/products/beats-by-dre-powerbeats-pro-black-headphone-zone-13980296151103_2000x.jpg?v=1579674014"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <%- include("partials/new") %>
+                                    <div class="product_content">
+                                        <div class="product_title">
+                                            <a href="product.html">Beats Powerbeats Pro</a>
+                                        </div>
+                                        <div class="product_price">$670</div>
+                                    </div>
+                                </div>
+
+                                <!-- Product -->
+                                <div class="product">
+                                    <div class="product_image">
+                                        <img
+                                            src="https://cdn.shopify.com/s/files/1/0153/8863/products/sony-wh-1000xm3-black-headphone-zone-4090533871679_2000x.jpg?v=1580374861"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="product_content">
+                                        <div class="product_title">
+                                            <a href="product.html">Sony WH-1000XM3</a>
+                                        </div>
+                                        <div class="product_price">$670</div>
+                                    </div>
+                                </div>
+
+                                <!-- Product -->
+                                <div class="product">
+                                    <div class="product_image">
+                                        <img
+                                            src="https://cdn.shopify.com/s/files/1/0153/8863/products/shure-se535-wireless-bronze-metallic-headphone-zone-12801465155647_2000x.jpg?v=1579741654"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="product_content">
+                                        <div class="product_title">
+                                            <a href="product.html">Shure - SE535</a>
+                                        </div>
+                                        <div class="product_price">$670</div>
+                                    </div>
+                                </div>
+
+                                <!-- Product -->
+                                <div class="product">
+                                    <div class="product_image">
+                                        <img
+                                            src="https://cdn.shopify.com/s/files/1/0153/8863/products/beats-by-dr-dre-studio-3-wireless-grey-headphone-zone-13979580334143_2000x.jpg?v=1579685612"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="product_content">
+                                        <div class="product_title">
+                                            <a href="product.html">Beats Studio 3 Wireless</a>
+                                        </div>
+                                        <div class="product_price">$670</div>
+                                    </div>
+                                </div>
+
+                                <!-- Product -->
+                                <div class="product">
+                                    <div class="product_image">
+                                        <img
+                                            src="https://cdn.shopify.com/s/files/1/0153/8863/products/bose-noise-cancelling-headphones-700-black-headphone-zone-13980366438463_2000x.jpg?v=1579661252"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <%- include("partials/hot") %>
+                                    <div class="product_content">
+                                        <div class="product_title">
+                                            <a href="product.html">Bose NC Headphones 700</a>
+                                        </div>
+                                        <div class="product_price">$670</div>
+                                    </div>
+                                </div>
+
+                                <!-- Product -->
+                                <div class="product">
+                                    <div class="product_image">
+                                        <img
+                                            src="https://cdn.shopify.com/s/files/1/0153/8863/products/shure-se846-bt2-black-headphone-zone-11959542972479_2000x.jpg?v=1579740057"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="product_content">
+                                        <div class="product_title">
+                                            <a href="product.html">Shure - SE846</a>
+                                        </div>
+                                        <div class="product_price">$670</div>
+                                    </div>
+                                </div>
+
+                                <!-- Product -->
+                                <div class="product">
+                                    <div class="product_image">
+                                        <img
+                                            src="https://cdn.shopify.com/s/files/1/0153/8863/products/sennheiser-hd-4-50-btnc-headphone-zone-29111340359_2000x.jpg?v=1579751850"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <%- include("partials/hot") %>
+                                    <div class="product_content">
+                                        <div class="product_title">
+                                            <a href="product.html">Sennheiser HD 4.50 BTNC</a>
+                                        </div>
+                                        <div class="product_price">$670</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ad -->
+
+            <div class="avds_xl">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="avds_xl_container clearfix">
+                                <div
+                                    class="avds_xl_background"
+                                    style="background-image: url(images/avds_xl.jpg);"
+                                ></div>
+                                <div class="avds_xl_content">
+                                    <div class="avds_title">Exclusive Headphones</div>
+                                    <div class="avds_text">
+                                        One of the best sounding headphones money can buy.
+                                    </div>
+                                    <div class="avds_link avds_xl_link">
+                                        <a href="categories.html">See More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Icon Boxes -->
+
+            <%- include("partials/features") %>
+
+            <!-- Newsletter -->
+
+            <div class="newsletter">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="newsletter_border"></div>
+                        </div>
+                    </div>
+                    <!--<div class="row">
+                        <div class="col-lg-8 offset-lg-2">
+                            <div class="newsletter_content text-center">
+                                <div class="newsletter_title">Subscribe to our newsletter</div>
+                                <div class="newsletter_text">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a
+                                        ultricies metus. Sed nec molestie eros
+                                    </p>
+                                </div>
+                                <div class="newsletter_form_container">
+                                    <form action="#" id="newsletter_form" class="newsletter_form">
+                                        <input type="email" class="newsletter_input" required="required" />
+                                        <button class="newsletter_button trans_200">
+                                            <span>Subscribe</span>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+
+            <!-- Footer -->
+
+            <div class="footer_overlay"></div>
+            <%- include("partials/footer") %>
+        </div>
+
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="styles/bootstrap4/popper.js"></script>
+        <script src="styles/bootstrap4/bootstrap.min.js"></script>
+        <script src="plugins/greensock/TweenMax.min.js"></script>
+        <script src="plugins/greensock/TimelineMax.min.js"></script>
+        <script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
+        <script src="plugins/greensock/animation.gsap.min.js"></script>
+        <script src="plugins/greensock/ScrollToPlugin.min.js"></script>
+        <script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+        <script src="plugins/Isotope/isotope.pkgd.min.js"></script>
+        <script src="plugins/easing/easing.js"></script>
+        <script src="plugins/parallax-js-master/parallax.min.js"></script>
+        <script src="js/custom.js"></script>
+    </body>
+</html>

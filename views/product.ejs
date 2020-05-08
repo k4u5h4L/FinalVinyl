@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Product</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="Sublime project" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css" />
+        <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css" />
+        <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css" />
+        <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css" />
+        <link rel="stylesheet" type="text/css" href="styles/product.css" />
+        <link rel="stylesheet" type="text/css" href="styles/product_responsive.css" />
+        
+    </head>
+    <body>
+        <div class="super_container">
+            <!-- Header -->
+
+            <%- include("partials/navbar") %>
+
+            <!-- Menu -->
+
+            <!--<div class="menu menu_mm trans_300">
+                <div class="menu_container menu_mm">
+                    <div class="page_menu_content">
+                        <div class="page_menu_search menu_mm">
+                            <form action="#">
+                                <input
+                                    type="search"
+                                    required="required"
+                                    class="page_menu_search_input menu_mm"
+                                    placeholder="Search for products..."
+                                />
+                            </form>
+                        </div>
+                        <ul class="page_menu_nav menu_mm">
+                            <li class="page_menu_item has-children menu_mm">
+                                <a href="index.html">Home<i class="fa fa-angle-down"></i></a>
+                                <ul class="page_menu_selection menu_mm">
+                                    <li class="page_menu_item menu_mm">
+                                        <a href="categories.html"
+                                            >Categories<i class="fa fa-angle-down"></i
+                                        ></a>
+                                    </li>
+                                    <li class="page_menu_item menu_mm">
+                                        <a href="product.html">Product<i class="fa fa-angle-down"></i></a>
+                                    </li>
+                                    <li class="page_menu_item menu_mm">
+                                        <a href="cart.html">Cart<i class="fa fa-angle-down"></i></a>
+                                    </li>
+                                    <li class="page_menu_item menu_mm">
+                                        <a href="checkout.html">Checkout<i class="fa fa-angle-down"></i></a>
+                                    </li>
+                                    <li class="page_menu_item menu_mm">
+                                        <a href="contact.html">Contact<i class="fa fa-angle-down"></i></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="page_menu_item has-children menu_mm">
+                                <a href="categories.html">Categories<i class="fa fa-angle-down"></i></a>
+                                <ul class="page_menu_selection menu_mm">
+                                    <li class="page_menu_item menu_mm">
+                                        <a href="categories.html">Category<i class="fa fa-angle-down"></i></a>
+                                    </li>
+                                    <li class="page_menu_item menu_mm">
+                                        <a href="categories.html">Category<i class="fa fa-angle-down"></i></a>
+                                    </li>
+                                    <li class="page_menu_item menu_mm">
+                                        <a href="categories.html">Category<i class="fa fa-angle-down"></i></a>
+                                    </li>
+                                    <li class="page_menu_item menu_mm">
+                                        <a href="categories.html">Category<i class="fa fa-angle-down"></i></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="page_menu_item menu_mm">
+                                <a href="index.html">Accessories<i class="fa fa-angle-down"></i></a>
+                            </li>
+                            <li class="page_menu_item menu_mm">
+                                <a href="#">Offers<i class="fa fa-angle-down"></i></a>
+                            </li>
+                            <li class="page_menu_item menu_mm">
+                                <a href="contact.html">Contact<i class="fa fa-angle-down"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="menu_close"><i class="fa fa-times" aria-hidden="true"></i></div>
+
+                <div class="menu_social">
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>-->
+
+            <!-- Home -->
+
+            <div class="home">
+                <div class="home_container">
+                    <div class="home_background" style="background-image: url(https://images.wallpaperscraft.com/image/headphones_bw_headset_120277_3840x2400.jpg);"></div>
+                    <div class="home_content_container">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="home_content">
+                                        <div class="home_title">It can't get any better than this.<span>.</span></div>
+                                        <div class="home_text">
+                                            <p>
+                                                Hand-picked and throughly inspected products. Which means you're guranteed to get the best of your music.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Details -->
+
+            <div class="product_details">
+                <div class="container">
+                    <div class="row details_row">
+                        <!-- Product Image -->
+                        <div class="col-lg-6">
+                            <div class="details_image">
+                                <div class="details_image_large">
+                                    <img
+                                        src="https://cdn.shopify.com/s/files/1/0153/8863/products/beats-by-dre-powerbeats-pro-black-headphone-zone-13980296151103_2000x.jpg?v=1579674014"
+                                        alt=""
+                                    />
+                                    <div class="product_extra product_new">
+                                        <a href="#">New</a>
+                                    </div>
+                                </div>
+                                <div
+                                    class="details_image_thumbnails d-flex flex-row align-items-start justify-content-between"
+                                >
+                                    <div
+                                        class="details_image_thumbnail active"
+                                        data-image="https://cdn.shopify.com/s/files/1/0153/8863/products/beats-by-dre-powerbeats-pro-black-headphone-zone-13980296151103_2000x.jpg?v=1579674014"
+                                    >
+                                        <img
+                                            src="https://cdn.shopify.com/s/files/1/0153/8863/products/beats-by-dre-powerbeats-pro-black-headphone-zone-13980296151103_2000x.jpg?v=1579674014"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div
+                                        class="details_image_thumbnail"
+                                        data-image="https://cdn.shopify.com/s/files/1/0153/8863/products/beats-by-dre-powerbeats-pro-headphone-zone-13980292350015_2000x.jpg?v=1579674014"
+                                    >
+                                        <img
+                                            src="https://cdn.shopify.com/s/files/1/0153/8863/products/beats-by-dre-powerbeats-pro-headphone-zone-13980292350015_2000x.jpg?v=1579674014"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div
+                                        class="details_image_thumbnail"
+                                        data-image="https://cdn.shopify.com/s/files/1/0153/8863/products/beats-by-dre-powerbeats-pro-headphone-zone-13980301197375_2000x.png?v=1579674014"
+                                    >
+                                        <img
+                                            src="https://cdn.shopify.com/s/files/1/0153/8863/products/beats-by-dre-powerbeats-pro-headphone-zone-13980301197375_2000x.png?v=1579674014"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div
+                                        class="details_image_thumbnail"
+                                        data-image="https://cdn.shopify.com/s/files/1/0153/8863/products/beats-by-dre-powerbeats-pro-headphone-zone-13980299526207_2000x.jpg?v=1579674014"
+                                    >
+                                        <img
+                                            src="https://cdn.shopify.com/s/files/1/0153/8863/products/beats-by-dre-powerbeats-pro-headphone-zone-13980299526207_2000x.jpg?v=1579674014"
+                                            alt=""
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Content -->
+                        <div class="col-lg-6">
+                            <div class="details_content">
+                                <div class="details_name">Beats Powerbeats Pro</div>
+                                <div class="details_discount">$300</div>
+                                <div class="details_price">$270</div>
+
+                                <!-- In Stock -->
+                                <div class="in_stock_container">
+                                    <div class="availability">Availability:</div>
+                                    <span>In Stock</span>
+                                </div>
+                                <div class="details_text">
+                                    <p>
+                                        <ul>
+                                            <li>Totally wireless high-performance earphones</li>
+                                            <li>Up to 9 hours of listening time (more than 24 hours with charging case)</li>
+                                            <li>Adjustable, secure-fit earhooks for lightweight comfort and stability</li>
+                                            <li>Reinforced design for sweat and water resistance during tough workouts</li>
+                                            <li>Volume and track controls on each earbud, voice capability, and Auto Play/Pause</li>
+                                            <li>Powerful, balanced sound with dynamic range and noise isolation</li>
+                                            <li>“Hey Siri” hands-free voice and improved connection speed via the Apple H1 headphone chip</li>
+                                            <li>Earbuds connect independently via Class 1 Bluetooth for extended range and fewer dropouts</li>
+                                            <li>With Fast Fuel, a 5-minute charge gives 1.5 hours of playback when battery is low</li>
+                                            <li>Enhanced phone call performance and call handling from either earbud</li>
+                                        </ul>
+                                    </p>
+                                </div>
+
+                                <!-- Product Quantity -->
+                                <form action="/product" method="POST">
+                                    <div class="product_quantity_container">
+                                        <div class="product_quantity clearfix">
+                                            <span>Qty</span>
+                                            <input id="quantity_input" name="quantity" type="text" pattern="[0-9]*" value="1" />
+                                            <div class="quantity_buttons">
+                                                <div
+                                                    id="quantity_inc_button"
+                                                    class="quantity_inc quantity_control"
+                                                >
+                                                    <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                                                </div>
+                                                <div
+                                                    id="quantity_dec_button"
+                                                    class="quantity_dec quantity_control"
+                                                >
+                                                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        <!--<div class="button cart_button"><a href="#">Add to cart</a></div>-->
+                                        <button class="btn btn-1 btn-1e">Add to cart</button>
+                                    </div>
+                            </form>
+
+                                <!-- Share -->
+                                <!--<div class="details_share">
+                                    <span>Share:</span>
+                                    <ul>
+                                        <li>
+                                            <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>-->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="description"></div>
+
+                    <div class="row description_row">
+                        <div class="col">
+                            <div class="description_title_container">
+                                <div class="description_title">Description</div>
+                                <div class="reviews_title">
+                                    <a href="#reviews">Reviews <span>(1)</span></a>
+                                </div>
+                            </div>
+                            <div class="description_text">
+                                <h3>High-performance workout earphones</h3>
+                                <p>
+                                    Powerbeats Pro will revolutionize the way you work out. Built for elite
+                                    athletes, these totally wireless earphones have no wires to hold you back.
+                                    The adjustable, secure-fit earhooks are customizable with multiple eartip
+                                    options for extended comfort and are made to stay in place, no matter how
+                                    hard you go. These lightweight earphones are built for performance with a
+                                    reinforced design for sweat and water resistance, so you can take your
+                                    workouts to the next level. With up to 9 hours of listening time in each
+                                    earbud and powerful, balanced sound, you’ll always have your music to
+                                    motivate you.
+                                </p>
+                                <h3>Sound like a pro</h3>
+                                <p>
+                                    We listened to real athletes with the aim of designing wireless earphones
+                                    that matched their toughest workouts—and we heard over and over that sound
+                                    was their top priority. Powerbeats Pro boast powerful, balanced audio
+                                    thanks to an entirely redesigned acoustic package that delivers pure sound
+                                    reproduction, enhanced clarity, and improved dynamic range. Because great
+                                    sound starts with proper fit, these earphones were also crafted with a
+                                    focus on ergonomic comfort to give you the best listening experience
+                                    possible.
+                                </p>
+                                <h3>Play both sides or just one at a time</h3>
+                                <p>
+                                    Left, right, or both, enjoy ultimate control over your audio. Each earbud
+                                    has full volume and track controls so you don’t need your iPhone or other
+                                    device to adjust your music. Auto Play/Pause sensors know when the earbuds
+                                    are in your ear, jumpstarting your workouts as soon as you’re ready to go.
+                                    And with voice-assistant capability on a variety of compatible devices,
+                                    you can stay in the zone.
+                                </p>
+                                <h3>Power. Play.</h3>
+                                <p>
+                                    Long hours of training? Marathons? Bring it. Each earbud has up to 9 hours
+                                    of listening time so you can keep your music going. With the charging
+                                    case, you’ll get more than 24 hours of combined playback. If you’re in
+                                    need of extra juice, 5-minute Fast Fuel charging gives 1.5 hours of
+                                    playback when the battery is low.1 To further conserve battery life, Auto
+                                    On/Off sensors detect when earbuds are idle and automatically enter sleep
+                                    mode. When you’re ready to use them again, simply put them back in your
+                                    ears and you’ll be off and running. Now, you can spend less time worrying
+                                    about charging and more time charging forward.
+                                </p>
+                                <h3>Just ask Siri.</h3>
+                                <p>
+                                    Talking to your favorite personal assistant is easier than ever. Simply
+                                    say “Hey Siri” for voice-activated assistance without having to reach for
+                                    your iPhone.2 Powered by the new Apple H1 headphone chip, Powerbeats Pro
+                                    deliver a faster and more stable wireless connection to your devices.
+                                </p>
+                                <h3>Wireless that works</h3>
+                                <p>
+                                    Powerbeats Pro are ready to go when you are. With Class 1 Bluetooth
+                                    technology, these wireless earphones offer extended range and fewer
+                                    dropouts so they stay connected as you keep moving. Each earbud connects
+                                    independently to your device for better connectivity and freedom of use
+                                    for music and phone calls. A voice accelerometer and multiple microphones
+                                    target your voice and filter out external noise. They instantly set
+                                    up—just open the case and hold near your iPhone—and then automatically
+                                    connect to your Apple Watch, iPad, or Mac.
+                                </p>
+                                <p id="reviews"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row description_row">
+                        <div class="col">
+                            <div class="description_title_container">
+                                <div class="description_title">Reviews</div>
+                                <div class="reviews_title">
+                                    <a href="#description">Description </a>
+                                </div>
+                            </div>
+                            <div class="description_text">
+                                <h2>
+                                    <span>8.0</span> --- <a href="https://cnet.com">cnet.com</a>
+                                </h2>
+                                <h2>
+                                    <span>4/5</span> --- <a href="https://techradar.com">techradar.com</a>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products -->
+
+            <div class="products">
+                <div class="container">
+                    <div class="row">
+                        <div class="col text-center">
+                            <div class="products_title">Related Products</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="product_grid">
+                                <!-- Product -->
+                                <div class="product">
+                                    <div class="product_image"><img src="https://cdn.shopify.com/s/files/1/0153/8863/products/bose-noise-cancelling-headphones-700-black-headphone-zone-13980366438463_2000x.jpg?v=1579661252" alt="" /></div>
+                                    <%- include("partials/new") %>
+                                    <div class="product_content">
+                                        <div class="product_title">
+                                            <a href="product.html">Bose NC Headphones 700</a>
+                                        </div>
+                                        <div class="product_price">$670</div>
+                                    </div>
+                                </div>
+
+                                <!-- Product -->
+                                <div class="product">
+                                    <div class="product_image"><img src="https://cdn.shopify.com/s/files/1/0153/8863/products/beats-by-dre-solo-pro-black-headphone-zone-13980035219519_2000x.jpg?v=1579706821" alt="" /></div>
+                                    <%- include("partials/sale") %>
+                                    <div class="product_content">
+                                        <div class="product_title">
+                                            <a href="product.html">Beats Solo Pro</a>
+                                        </div>
+                                        <div class="product_price">$520</div>
+                                    </div>
+                                </div>
+
+                                <!-- Product -->
+                                <div class="product">
+                                    <div class="product_image"><img src="https://cdn.shopify.com/s/files/1/0153/8863/products/sony-wh-1000xm3-black-headphone-zone-4090533871679_2000x.jpg?v=1580374861" alt="" /></div>
+                                    <div class="product_content">
+                                        <div class="product_title">
+                                            <a href="product.html">Sony WH-1000XM3</a>
+                                        </div>
+                                        <div class="product_price">$710</div>
+                                    </div>
+                                </div>
+
+                                <!-- Product -->
+                                <div class="product">
+                                    <div class="product_image"><img src="https://cdn.shopify.com/s/files/1/0153/8863/products/beats-by-dr-dre-studio-3-wireless-grey-headphone-zone-13979580334143_2000x.jpg?v=1579685612" alt="" /></div>
+                                    <div class="product_content">
+                                        <div class="product_title">
+                                            <a href="product.html">Beats Studio 3 Wireless</a>
+                                        </div>
+                                        <div class="product_price">$330</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Newsletter -->
+
+            <div class="newsletter">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="newsletter_border"></div>
+                        </div>
+                    </div>
+                    <!--<div class="row">
+                        <div class="col-lg-8 offset-lg-2">
+                            <div class="newsletter_content text-center">
+                                <div class="newsletter_title">Subscribe to our newsletter</div>
+                                <div class="newsletter_text">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a
+                                        ultricies metus. Sed nec molestie eros
+                                    </p>
+                                </div>
+                                <div class="newsletter_form_container">
+                                    <form action="#" id="newsletter_form" class="newsletter_form">
+                                        <input type="email" class="newsletter_input" required="required" />
+                                        <button class="newsletter_button trans_200">
+                                            <span>Subscribe</span>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+
+            <!-- Footer -->
+
+            <div class="footer_overlay"></div>
+            <%- include("partials/footer") %>
+        </div>
+
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="styles/bootstrap4/popper.js"></script>
+        <script src="styles/bootstrap4/bootstrap.min.js"></script>
+        <script src="plugins/greensock/TweenMax.min.js"></script>
+        <script src="plugins/greensock/TimelineMax.min.js"></script>
+        <script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
+        <script src="plugins/greensock/animation.gsap.min.js"></script>
+        <script src="plugins/greensock/ScrollToPlugin.min.js"></script>
+        <script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+        <script src="plugins/Isotope/isotope.pkgd.min.js"></script>
+        <script src="plugins/easing/easing.js"></script>
+        <script src="plugins/parallax-js-master/parallax.min.js"></script>
+        <script src="js/product.js"></script>
+        
+    </body>
+</html>

@@ -1,0 +1,9 @@
+node_modules
+.env
+Procfile
+cart.html
+categories.html
+checkout.html
+contact.html
+index.html
+product.html
