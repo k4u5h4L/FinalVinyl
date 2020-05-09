@@ -222,7 +222,7 @@ section {
     overflow: hidden;
     cursor: pointer;
 }
-.button {
+.button a {
     display: block;
     position: relative;
     font-size: 16px;
@@ -276,68 +276,7 @@ section {
 
 /* ------------------------------------------------------------------------------- */
 
-.submit {
-    width: 178px;
-    height: 61px;
-    background: none;
-    text-align: center;
-    border: solid 2px #1b1b1b;
-    overflow: hidden;
-    cursor: pointer;
-}
-.submit {
-    display: block;
-    position: relative;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 57px;
-    color: #1b1b1b;
-    background: none;
-    z-index: 1;
-    -webkit-transition: all 200ms ease;
-    -moz-transition: all 200ms ease;
-    -ms-transition: all 200ms ease;
-    -o-transition: all 200ms ease;
-    transition: all 200ms ease;
-}
-.submit::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 150%;
-    height: 100%;
-    background: #ffffff;
-    z-index: 0;
-    opacity: 0;
-    -webkit-transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
-    transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
-    -webkit-transform-origin: 0% 100%;
-    transform-origin: 0% 100%;
-    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s, background-color 0.3s;
-    transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
-}
-.submit:hover::after {
-    opacity: 1;
-    -webkit-transform: rotate3d(0, 0, 1, 0deg);
-    transform: rotate3d(0, 0, 1, 0deg);
-    -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-}
-.submit_light {
-    border: solid 2px #ffffff;
-}
-.submit_light {
-    color: #ffffff;
-}
-.submit:hover {
-    color: #ffffff;
-}
-.submit_light:hover {
-    color: #1b1b1b;
-}
-
-.btn {
+/* .btn {
     border: none;
     font-family: inherit;
     font-size: inherit;
@@ -366,7 +305,6 @@ section {
     transition: all 0.3s;
 }
 
-/* Pseudo elements for icons */
 .btn:before {
     font-family: "icomoon";
     speak: none;
@@ -418,7 +356,7 @@ section {
 .btn-1e:active:after {
     height: 400%;
     opacity: 1;
-}
+} */
 
 /*********************************
 3. Header
