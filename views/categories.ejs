@@ -6,6 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="Sublime project" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="images/site-logo.png" />
         <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css" />
         <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css" />
@@ -19,94 +20,6 @@
             <!-- Header -->
 
             <%- include("partials/navbar") %>
-
-            <!-- Menu -->
-
-            <!--<div class="menu menu_mm trans_300">
-                <div class="menu_container menu_mm">
-                    <div class="page_menu_content">
-                        <div class="page_menu_search menu_mm">
-                            <form action="#">
-                                <input
-                                    type="search"
-                                    required="required"
-                                    class="page_menu_search_input menu_mm"
-                                    placeholder="Search for products..."
-                                />
-                            </form>
-                        </div>
-                        <ul class="page_menu_nav menu_mm">
-                            <li class="page_menu_item has-children menu_mm">
-                                <a href="index.html">Home<i class="fa fa-angle-down"></i></a>
-                                <ul class="page_menu_selection menu_mm">
-                                    <li class="page_menu_item menu_mm">
-                                        <a href="categories.html"
-                                            >Categories<i class="fa fa-angle-down"></i
-                                        ></a>
-                                    </li>
-                                    <li class="page_menu_item menu_mm">
-                                        <a href="product.html">Product<i class="fa fa-angle-down"></i></a>
-                                    </li>
-                                    <li class="page_menu_item menu_mm">
-                                        <a href="cart.html">Cart<i class="fa fa-angle-down"></i></a>
-                                    </li>
-                                    <li class="page_menu_item menu_mm">
-                                        <a href="checkout.html">Checkout<i class="fa fa-angle-down"></i></a>
-                                    </li>
-                                    <li class="page_menu_item menu_mm">
-                                        <a href="contact.html">Contact<i class="fa fa-angle-down"></i></a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="page_menu_item has-children menu_mm">
-                                <a href="categories.html">Categories<i class="fa fa-angle-down"></i></a>
-                                <ul class="page_menu_selection menu_mm">
-                                    <li class="page_menu_item menu_mm">
-                                        <a href="categories.html">Category<i class="fa fa-angle-down"></i></a>
-                                    </li>
-                                    <li class="page_menu_item menu_mm">
-                                        <a href="categories.html">Category<i class="fa fa-angle-down"></i></a>
-                                    </li>
-                                    <li class="page_menu_item menu_mm">
-                                        <a href="categories.html">Category<i class="fa fa-angle-down"></i></a>
-                                    </li>
-                                    <li class="page_menu_item menu_mm">
-                                        <a href="categories.html">Category<i class="fa fa-angle-down"></i></a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="page_menu_item menu_mm">
-                                <a href="index.html">Accessories<i class="fa fa-angle-down"></i></a>
-                            </li>
-                            <li class="page_menu_item menu_mm">
-                                <a href="#">Offers<i class="fa fa-angle-down"></i></a>
-                            </li>
-                            <li class="page_menu_item menu_mm">
-                                <a href="contact.html">Contact<i class="fa fa-angle-down"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="menu_close"><i class="fa fa-times" aria-hidden="true"></i></div>
-
-                <div class="menu_social">
-                    <ul>
-                        <li>
-                            <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>-->
 
             <!-- Home -->
 
@@ -124,7 +37,7 @@
                                 <div class="col">
                                     <div class="home_content">
                                         <div class="home_title">
-                                            It can't get any better than this.<span>.</span>
+                                            It can't get any better than this<span>.</span>
                                         </div>
                                         <div class="home_text">
                                             <p>
@@ -184,9 +97,7 @@
                                 <!-- Product -->
                                 <div class="product">
                                     <div class="product_image"><img src="images/product_1.jpg" alt="" /></div>
-                                    <div class="product_extra product_new">
-                                        <a href="categories.html">New</a>
-                                    </div>
+                                    <%- include("partials/new") %>
                                     <div class="product_content">
                                         <div class="product_title">
                                             <a href="product.html">Smart Phone</a>
@@ -198,9 +109,7 @@
                                 <!-- Product -->
                                 <div class="product">
                                     <div class="product_image"><img src="images/product_2.jpg" alt="" /></div>
-                                    <div class="product_extra product_sale">
-                                        <a href="categories.html">Sale</a>
-                                    </div>
+                                    <%- include("partials/sale") %>
                                     <div class="product_content">
                                         <div class="product_title">
                                             <a href="product.html">Smart Phone</a>
@@ -284,9 +193,7 @@
                                 <!-- Product -->
                                 <div class="product">
                                     <div class="product_image"><img src="images/product_9.jpg" alt="" /></div>
-                                    <div class="product_extra product_sale">
-                                        <a href="categories.html">Hot</a>
-                                    </div>
+                                    <%- include("partials/hot") %>
                                     <div class="product_content">
                                         <div class="product_title">
                                             <a href="product.html">Smart Phone</a>
@@ -316,9 +223,7 @@
                                     <div class="product_image">
                                         <img src="images/product_11.jpg" alt="" />
                                     </div>
-                                    <div class="product_extra product_sale">
-                                        <a href="categories.html">Hot</a>
-                                    </div>
+                                    <%- include("partials/hot") %>
                                     <div class="product_content">
                                         <div class="product_title">
                                             <a href="product.html">Smart Phone</a>
@@ -332,9 +237,7 @@
                                     <div class="product_image">
                                         <img src="images/product_12.jpg" alt="" />
                                     </div>
-                                    <div class="product_extra product_sale">
-                                        <a href="categories.html">Hot</a>
-                                    </div>
+                                    <%- include("partials/hot") %>
                                     <div class="product_content">
                                         <div class="product_title">
                                             <a href="product.html">Smart Phone</a>
