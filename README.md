@@ -26,10 +26,10 @@ cd FinalVinyl/ && npm install
 -   Run the server using npm.
 
 ```
-npm run devStart
+npm run dev
 ```
 
-You should have the development server up and running.
+You should have the development server up and running at [localhost:3000](http://localhost:3000).
 
 ### Note:
 
