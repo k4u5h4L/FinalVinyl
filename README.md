@@ -33,6 +33,7 @@ You should have the development server up and running.
 
 ### Note:
 
+-   This project will be moved to TypeScript soon. So please wait if you are going to make changes or work on it.
 -   This project is made for educational purposes only.
 -   This is not a real and commercial site.
 -   Please do not use it for commercial purposes.
