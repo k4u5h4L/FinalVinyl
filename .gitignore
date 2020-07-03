@@ -1,9 +1,6 @@
-node_modules
+node_modules/
 .env
+.env.local
+dist/
 Procfile
-cart.html
-categories.html
-checkout.html
-contact.html
-index.html
-product.html
+app.js
