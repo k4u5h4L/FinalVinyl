@@ -44,25 +44,27 @@ app.get("/categories", (req: Request, res: Response) => {
   res.render("categories");
 });
 
-const newPdt = new Product({
-  name: "beats",
-  imgSrc: ["abc", "def"],
-  oldCost: 4,
-  newCost: 6,
-  avail: true,
-  about: ["abc", "def"],
-  Desc: [
-    {
-      title: "hello",
-      body: "there",
-    },
-    {
-      title: "hey",
-      body: "there",
-    },
-  ],
-  type: "earphones",
-});
+// the below is test data to store in the database
+
+// const newPdt = new Product({
+//   name: "beats",
+//   imgSrc: ["abc", "def"],
+//   oldCost: 4,
+//   newCost: 6,
+//   avail: true,
+//   about: ["abc", "def"],
+//   Desc: [
+//     {
+//       title: "hello",
+//       body: "there",
+//     },
+//     {
+//       title: "hey",
+//       body: "there",
+//     },
+//   ],
+//   type: "earphones",
+// });
 
 // newPdt.save();
 

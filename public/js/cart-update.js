@@ -14,7 +14,7 @@ const getCartData = JSON.parse(localStorage.getItem("cartItems"));
 let count = 0;
 
 if (!(getCartData == null)) {
-  count = getCartData.number;
+  count = parseInt(getCartData.number);
   cartData.number = count;
   cartData.itemIds = getCartData.itemIds;
 }
