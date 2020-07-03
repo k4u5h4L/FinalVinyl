@@ -4,3 +4,4 @@ node_modules/
 dist/
 Procfile
 app.js
+rectify.txt

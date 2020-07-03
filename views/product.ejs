@@ -56,7 +56,7 @@
                             <div class="details_image">
                                 <div class="details_image_large">
                                     <img
-                                        src="https://cdn.shopify.com/s/files/1/0153/8863/products/beats-by-dre-powerbeats-pro-black-headphone-zone-13980296151103_2000x.jpg?v=1579674014"
+                                        src="<%= data.imgSrc[0] %>"
                                         alt=""
                                     />
                                     <div class="product_extra product_new">
@@ -66,16 +66,18 @@
                                 <div
                                     class="details_image_thumbnails d-flex flex-row align-items-start justify-content-between"
                                 >
+                                <% data.imgSrc.forEach((i) => { %>
                                     <div
                                         class="details_image_thumbnail active"
-                                        data-image="https://cdn.shopify.com/s/files/1/0153/8863/products/beats-by-dre-powerbeats-pro-black-headphone-zone-13980296151103_2000x.jpg?v=1579674014"
+                                        data-image="<%= i %>"
                                     >
                                         <img
-                                            src="https://cdn.shopify.com/s/files/1/0153/8863/products/beats-by-dre-powerbeats-pro-black-headphone-zone-13980296151103_2000x.jpg?v=1579674014"
+                                            src="<%= i %>"
                                             alt=""
                                         />
                                     </div>
-                                    <div
+                                <% }) %>
+                                    <!-- <div
                                         class="details_image_thumbnail"
                                         data-image="https://cdn.shopify.com/s/files/1/0153/8863/products/beats-by-dre-powerbeats-pro-headphone-zone-13980292350015_2000x.jpg?v=1579674014"
                                     >
@@ -101,7 +103,7 @@
                                             src="https://cdn.shopify.com/s/files/1/0153/8863/products/beats-by-dre-powerbeats-pro-headphone-zone-13980299526207_2000x.jpg?v=1579674014"
                                             alt=""
                                         />
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -110,18 +112,25 @@
                         <div class="col-lg-6">
                             <div class="details_content">
                                 <div class="details_name">Beats Powerbeats Pro</div>
-                                <div class="details_discount">$300</div>
-                                <div class="details_price">$270</div>
+                                <div class="details_discount">$<%= data.oldCost %></div>
+                                <div class="details_price">$<%= data.newCost %></div>
 
                                 <!-- In Stock -->
                                 <div class="in_stock_container">
                                     <div class="availability">Availability:</div>
-                                    <span>In Stock</span>
+                                    <% if (data.avail) { %>
+                                        <span>In Stock</span>
+                                    <% } else { %>
+                                        <span style="color: red;">Out Of Stock</span>
+                                    <% } %>
                                 </div>
                                 <div class="details_text">
                                     <p>
                                         <ul>
-                                            <li>Totally wireless high-performance earphones</li>
+                                            <% data.about.forEach((i) => { %>
+                                                <li><%= i %></li>
+                                            <% }) %>
+                                            <!-- <li>Totally wireless high-performance earphones</li>
                                             <li>Up to 9 hours of listening time (more than 24 hours with charging case)</li>
                                             <li>Adjustable, secure-fit earhooks for lightweight comfort and stability</li>
                                             <li>Reinforced design for sweat and water resistance during tough workouts</li>
@@ -130,7 +139,7 @@
                                             <li>“Hey Siri” hands-free voice and improved connection speed via the Apple H1 headphone chip</li>
                                             <li>Earbuds connect independently via Class 1 Bluetooth for extended range and fewer dropouts</li>
                                             <li>With Fast Fuel, a 5-minute charge gives 1.5 hours of playback when battery is low</li>
-                                            <li>Enhanced phone call performance and call handling from either earbud</li>
+                                            <li>Enhanced phone call performance and call handling from either earbud</li> -->
                                         </ul>
                                     </p>
                                 </div>
@@ -184,18 +193,25 @@
                         </div>
                     </div>
 
-                    <div id="description"></div>
+                    <!-- <div id="description"></div> -->
 
                     <div class="row description_row">
                         <div class="col">
                             <div class="description_title_container">
                                 <div class="description_title">Description</div>
-                                <div class="reviews_title">
+                                <!-- <div class="reviews_title">
                                     <a href="#reviews">Reviews <span>(1)</span></a>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="description_text">
-                                <h3>High-performance workout earphones</h3>
+                                <% data.Desc.forEach((i) => { %>
+                                    <h3><%= i.title %></h3>
+                                    <p>
+                                        <%= i.body %>
+                                    </p>
+                                <% }) %>
+                                
+                                <!-- <h3>High-performance workout earphones</h3>
                                 <p>
                                     Powerbeats Pro will revolutionize the way you work out. Built for elite
                                     athletes, these totally wireless earphones have no wires to hold you back.
@@ -207,7 +223,8 @@
                                     earbud and powerful, balanced sound, you’ll always have your music to
                                     motivate you.
                                 </p>
-                                <h3>Sound like a pro</h3>
+                                
+                                 <h3>Sound like a pro</h3>
                                 <p>
                                     We listened to real athletes with the aim of designing wireless earphones
                                     that matched their toughest workouts—and we heard over and over that sound
@@ -256,12 +273,12 @@
                                     target your voice and filter out external noise. They instantly set
                                     up—just open the case and hold near your iPhone—and then automatically
                                     connect to your Apple Watch, iPad, or Mac.
-                                </p>
-                                <p id="reviews"></p>
+                                </p> -->
+                                <!-- <p id="reviews"></p> -->
                             </div>
                         </div>
                     </div>
-                    <div class="row description_row">
+                    <!-- <div class="row description_row">
                         <div class="col">
                             <div class="description_title_container">
                                 <div class="description_title">Reviews</div>
@@ -278,7 +295,7 @@
                                 </h2>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
