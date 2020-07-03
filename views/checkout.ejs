@@ -259,29 +259,46 @@
                     <div class="order_list_value ml-auto">Total</div>
                   </div>
                   <ul class="order_list">
+                    <!-- ################################################################ -->
+                    <% let subtotalVal = 0; %> <% for (const i in data) { %>
+                    ---------------------------------------------------------------
+
                     <li
                       class="d-flex flex-row align-items-center justify-content-start"
                     >
-                      <div class="order_list_title">Beats Powerbeats Pro</div>
-                      <div class="order_list_value ml-auto">$59.90</div>
+                      <div class="order_list_title"><%= data[i].name %></div>
+                      <div class="order_list_value ml-auto">
+                        $<%= data[i].newCost %>
+                      </div>
+                      <% subtotalVal += parseFloat(data[i].newCost) %>
                     </li>
+
+                    <% } %>
+                    ---------------------------------------------------------------
+                    <!-- ################################################################ -->
                     <li
                       class="d-flex flex-row align-items-center justify-content-start"
                     >
                       <div class="order_list_title">Subtotal</div>
-                      <div class="order_list_value ml-auto">$270.0</div>
+                      <div class="order_list_value ml-auto" id="subTotal">
+                        $<%= subtotalVal %>
+                      </div>
                     </li>
                     <li
                       class="d-flex flex-row align-items-center justify-content-start"
                     >
                       <div class="order_list_title">Shipping</div>
-                      <div class="order_list_value ml-auto">Free</div>
+                      <div class="order_list_value ml-auto" id="shippingFee">
+                        Free
+                      </div>
                     </li>
                     <li
                       class="d-flex flex-row align-items-center justify-content-start"
                     >
                       <div class="order_list_title">Total</div>
-                      <div class="order_list_value ml-auto">$270.0</div>
+                      <div class="order_list_value ml-auto" id="grandTotal">
+                        $270.0
+                      </div>
                     </li>
                   </ul>
                 </div>
@@ -318,7 +335,7 @@
                   to the terms and conditions of FinalVinyl &copy;.
                 </div>
                 <div class="button order_button">
-                  <a href="#">Place Order</a>
+                  <a href="#" style="color: aliceblue;">Place Order</a>
                 </div>
               </div>
             </div>
@@ -345,5 +362,6 @@
     <script src="js/checkout.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
     <script src="js/show-cart-items.js"></script>
+    <script src="js/grandTotal.js"></script>
   </body>
 </html>

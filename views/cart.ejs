@@ -88,7 +88,9 @@
                   </div>
                   <div class="cart_item_name_container">
                     <div class="cart_item_name">
-                      <a href=""><%= data[i].name %>></a>
+                      <a href="/productid=<%= data[i]._id %>"
+                        ><%= data[i].name %></a
+                      >
                     </div>
                     <div class="cart_item_edit">
                       <a href="#">Remove Product</a>
@@ -161,19 +163,38 @@
                 <div class="delivery_options">
                   <label class="delivery_option clearfix"
                     >Next day delivery
-                    <input type="radio" name="radio" />
+                    <input
+                      id="deliBtn"
+                      type="radio"
+                      name="radio"
+                      value="4.99"
+                      onchange="deliStatus()"
+                    />
                     <span class="checkmark"></span>
                     <span class="delivery_price">$4.99</span>
                   </label>
                   <label class="delivery_option clearfix"
                     >Two day delivery
-                    <input type="radio" name="radio" />
+                    <input
+                      id="deliBtn"
+                      type="radio"
+                      name="radio"
+                      value="1.99"
+                      onchange="deliStatus()"
+                    />
                     <span class="checkmark"></span>
                     <span class="delivery_price">$1.99</span>
                   </label>
                   <label class="delivery_option clearfix"
                     >Standard delivery
-                    <input type="radio" checked="checked" name="radio" />
+                    <input
+                      id="deliBtn"
+                      type="radio"
+                      checked="checked"
+                      name="radio"
+                      value="0"
+                      onchange="deliStatus()"
+                    />
                     <span class="checkmark"></span>
                     <span class="delivery_price">Free</span>
                   </label>
@@ -247,5 +268,7 @@
     <script src="js/cart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
     <script src="js/show-cart-items.js"></script>
+    <script src="js/subtotal.js"></script>
+    <script src="js/delivery-status.js"></script>
   </body>
 </html>

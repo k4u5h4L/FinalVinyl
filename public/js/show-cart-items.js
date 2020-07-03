@@ -2,7 +2,7 @@
 
 const cartItemsNo = Cookies.get("cartItems");
 
-console.log(cartItemsNo);
+//console.log(cartItemsNo);
 
 let count = 0;
 

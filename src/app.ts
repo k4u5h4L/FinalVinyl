@@ -107,7 +107,7 @@ app.get("/cart", (req: Request, res: Response) => {
       res.send("Error in sending the data.");
       console.log(err);
     } else {
-      console.log(pdt);
+      // console.log(pdt);
 
       res.render("cart", { data: pdt });
     }
@@ -115,7 +115,19 @@ app.get("/cart", (req: Request, res: Response) => {
 });
 
 app.get("/checkout", (req: Request, res: Response) => {
-  res.render("checkout");
+  const pdtCookie = JSON.parse(req.cookies.cartItems);
+  // console.log(pdtCookie);
+
+  Product.find({ _id: pdtCookie.itemIds }, (err, pdt) => {
+    if (err) {
+      res.send("Error in sending the data.");
+      console.log(err);
+    } else {
+      // console.log(pdt);
+
+      res.render("checkout", { data: pdt });
+    }
+  });
 });
 
 app.get("/contact", (req: Request, res: Response) => {

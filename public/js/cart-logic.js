@@ -12,7 +12,7 @@ const getCartData = Cookies.get("cartItems");
 let count2 = 0;
 
 if (getCartData != null && getCartData != undefined) {
-  console.log(`cookie exists: ${Cookies.get("cartItems")}`);
+  // console.log(`cookie exists: ${Cookies.get("cartItems")}`);
   const cartdatatemp = JSON.parse(getCartData);
   count2 = parseInt(cartdatatemp.number);
   cartData.number = count2;
