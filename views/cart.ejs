@@ -64,7 +64,7 @@
               <div class="cart_info_columns clearfix">
                 <div class="cart_info_col cart_info_col_product">Product</div>
                 <div class="cart_info_col cart_info_col_price">Price</div>
-                <div class="cart_info_col cart_info_col_quantity">Quantity</div>
+                <!-- <div class="cart_info_col cart_info_col_quantity">Quantity</div> -->
                 <div class="cart_info_col cart_info_col_total">Total</div>
               </div>
             </div>
@@ -73,6 +73,7 @@
             <div class="col">
               <!-- Cart Item -->
               <!-- ##################################################################### -->
+              <% for (const i in data) { %>
               <div
                 class="cart_item d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-start"
               >
@@ -82,12 +83,12 @@
                 >
                   <div class="cart_item_image">
                     <div>
-                      <img id="" src="" alt="product image" />
+                      <img src="<%= data[i].imgSrc[0] %>" alt="product image" />
                     </div>
                   </div>
                   <div class="cart_item_name_container">
                     <div class="cart_item_name">
-                      <a href="">Beats Powerbeats Pro</a>
+                      <a href=""><%= data[i].name %>></a>
                     </div>
                     <div class="cart_item_edit">
                       <a href="#">Remove Product</a>
@@ -95,9 +96,9 @@
                   </div>
                 </div>
                 <!-- Price -->
-                <div class="cart_item_price">$790.90</div>
+                <div class="cart_item_price">$<%= data[i].newCost %></div>
                 <!-- Quantity -->
-                <div class="cart_item_quantity">
+                <!-- <div class="cart_item_quantity">
                   <div class="product_quantity_container">
                     <div class="product_quantity clearfix">
                       <span>Qty</span>
@@ -123,10 +124,14 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
                 <!-- Total -->
-                <div class="cart_item_total">$790.90</div>
+                <% let cost = parseInt(data[i].newCost) %>
+                <div id="quantityOfItems" class="cart_item_total">
+                  $<%= cost %>
+                </div>
               </div>
+              <% } %>
               <!-- ##################################################################### -->
             </div>
           </div>
@@ -240,9 +245,7 @@
     <script src="plugins/easing/easing.js"></script>
     <script src="plugins/parallax-js-master/parallax.min.js"></script>
     <script src="js/cart.js"></script>
-    <script src="js/cart-state.js"></script>
-    <script src="/socket.io/socket.io.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
-    <script src="js/cart-items.js" defer></script>
+    <script src="js/show-cart-items.js"></script>
   </body>
 </html>

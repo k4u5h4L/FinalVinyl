@@ -5,8 +5,9 @@ import express, { Application, Request, Response } from "express";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import cookieParser from "cookie-parser";
-import cookie from "cookie";
-import Cookies from "js-cookie";
+
+// import cookie from "cookie";
+// import Cookies from "js-cookie";
 
 // import product from "./product";
 // import featured from "./featured";
@@ -20,11 +21,9 @@ app.use(cookieParser());
 
 app.set("view engine", "ejs");
 
-const server = app.listen(process.env.PORT || PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
-
-const io = require("socket.io")(server);
 
 // interface returnPdts {
 //   name: string;
@@ -100,10 +99,19 @@ app.post("/product", (req: Request, res: Response) => {
 });
 
 app.get("/cart", (req: Request, res: Response) => {
-  const thatCookie = req.cookies.test;
-  console.log(JSON.parse(thatCookie));
+  const pdtCookie = JSON.parse(req.cookies.cartItems);
+  // console.log(pdtCookie);
 
-  res.render("cart");
+  Product.find({ _id: pdtCookie.itemIds }, (err, pdt) => {
+    if (err) {
+      res.send("Error in sending the data.");
+      console.log(err);
+    } else {
+      console.log(pdt);
+
+      res.render("cart", { data: pdt });
+    }
+  });
 });
 
 app.get("/checkout", (req: Request, res: Response) => {
