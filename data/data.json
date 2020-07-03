@@ -1,0 +1,52 @@
+{
+  "name": "beats powerbeats pro",
+  "imgSrc": [
+    "https://cdn.shopify.com/s/files/1/0153/8863/products/beats-by-dre-powerbeats-pro-black-headphone-zone-13980296151103_2000x.jpg?v=1579674014",
+    "https://cdn.shopify.com/s/files/1/0153/8863/products/beats-by-dre-powerbeats-pro-headphone-zone-13980292350015_2000x.jpg?v=1579674014",
+    "https://cdn.shopify.com/s/files/1/0153/8863/products/beats-by-dre-powerbeats-pro-headphone-zone-13980301197375_2000x.png?v=1579674014",
+    "https://cdn.shopify.com/s/files/1/0153/8863/products/beats-by-dre-powerbeats-pro-headphone-zone-13980299526207_2000x.jpg?v=1579674014"
+  ],
+  "oldCost": 300,
+  "newCost": 250,
+  "avail": true,
+  "about": [
+    "Totally wireless high-performance earphones",
+    "Up to 9 hours of listening time (more than 24 hours with charging case)",
+    "Adjustable, secure-fit earhooks for lightweight comfort and stability",
+    "Reinforced design for sweat and water resistance during tough workouts",
+    "Volume and track controls on each earbud, voice capability, and Auto Play/Pause",
+    "Powerful, balanced sound with dynamic range and noise isolation",
+    "“Hey Siri” hands-free voice and improved connection speed via the Apple H1 headphone chip",
+    "Earbuds connect independently via Class 1 Bluetooth for extended range and fewer dropouts",
+    "With Fast Fuel, a 5-minute charge gives 1.5 hours of playback when battery is low",
+    "Enhanced phone call performance and call handling from either earbud"
+  ],
+  "Desc": [
+    {
+      "title": "High-performance workout earphones",
+      "body": "Powerbeats Pro will revolutionize the way you work out. Built for elite athletes, these totally wireless earphones have no wires to hold you back. The adjustable, secure-fit earhooks are customizable with multiple eartip options for extended comfort and are made to stay in place, no matter how hard you go. These lightweight earphones are built for performance with a reinforced design for sweat and water resistance, so you can take your workouts to the next level. With up to 9 hours of listening time in each earbud and powerful, balanced sound, you’ll always have your music to motivate you."
+    },
+    {
+      "title": "Sound like a pro",
+      "body": "We listened to real athletes with the aim of designing wireless earphones that matched their toughest workouts—and we heard over and over that sound was their top priority. Powerbeats Pro boast powerful, balanced audio thanks to an entirely redesigned acoustic package that delivers pure sound reproduction, enhanced clarity, and improved dynamic range. Because great sound starts with proper fit, these earphones were also crafted with a focus on ergonomic comfort to give you the best listening experience possible."
+    },
+    {
+      "title": "Play both sides or just one at a time",
+      "body": "Left, right, or both, enjoy ultimate control over your audio. Each earbud has full volume and track controls so you don’t need your iPhone or other device to adjust your music. Auto Play/Pause sensors know when the earbuds are in your ear, jumpstarting your workouts as soon as you’re ready to go. And with voice-assistant capability on a variety of compatible devices, you can stay in the zone."
+    },
+    {
+      "title": "Power. Play.",
+      "body": "Long hours of training? Marathons? Bring it. Each earbud has up to 9 hours of listening time so you can keep your music going. With the charging case, you’ll get more than 24 hours of combined playback. If you’re in need of extra juice, 5-minute Fast Fuel charging gives 1.5 hours of playback when the battery is low.1 To further conserve battery life, Auto On/Off sensors detect when earbuds are idle and automatically enter sleep mode. When you’re ready to use them again, simply put them back in your ears and you’ll be off and running. Now, you can spend less time worrying about charging and more time charging forward."
+    },
+    {
+      "title": "Just ask Siri.",
+      "body": "Talking to your favorite personal assistant is easier than ever. Simply say “Hey Siri” for voice-activated assistance without having to reach for your iPhone.2 Powered by the new Apple H1 headphone chip, Powerbeats Pro deliver a faster and more stable wireless connection to your devices."
+    },
+    {
+      "title": "Wireless that works.",
+      "body": "Powerbeats Pro are ready to go when you are. With Class 1 Bluetooth technology, these wireless earphones offer extended range and fewer dropouts so they stay connected as you keep moving. Each earbud connects independently to your device for better connectivity and freedom of use for music and phone calls. A voice accelerometer and multiple microphones target your voice and filter out external noise. They instantly set up—just open the case and hold near your iPhone—and then automatically connect to your Apple Watch, iPad, or Mac."
+    }
+  ],
+  "type": "earphones",
+  "featured": true
+}

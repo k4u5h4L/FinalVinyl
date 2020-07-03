@@ -29,7 +29,7 @@ cd FinalVinyl/ && npm install
 mongod
 ```
 
-- Fill in the data in the database from the `data.json` file into your local database. It does not have all the data, but enough to test.
+- Fill in the data in the database from the `data/data.json` file into your local database. It does not have all the data, but enough to test.
 
 - Run the server using npm.
 

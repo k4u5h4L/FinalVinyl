@@ -1,4 +1,4 @@
-const getCartData = JSON.parse(localStorage.getItem("cartItems"));
+const getCartData = JSON.parse(Cookies.get("cartItems"));
 
 let count = 0;
 

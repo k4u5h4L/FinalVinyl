@@ -5,3 +5,4 @@ dist/
 Procfile
 app.js
 rectify.txt
+data/temp.json

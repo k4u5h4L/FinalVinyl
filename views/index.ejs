@@ -90,7 +90,7 @@
                 <div>
                   <div class="avds_discount">
                     <div>15<span>%</span></div>
-                    <div>Discount</div>
+                    <div>Stock remaining</div>
                   </div>
                 </div>
               </div>
@@ -139,24 +139,39 @@
             <div class="col">
               <div class="product_grid">
                 <!-- Product -->
+                <% let x = 0; %>
+                <!-- setting the loop -->
+                <% data.forEach((i) => { %>
+
                 <div class="product">
                   <div class="product_image">
-                    <img
-                      src="https://cdn.shopify.com/s/files/1/0153/8863/products/beats-by-dre-solo-pro-black-headphone-zone-13980035219519_2000x.jpg?v=1579706821"
-                      alt=""
-                    />
+                    <img src="<%= i.imgSrc[0] %>" alt="product image" />
                   </div>
+                  <% if (x == 0) { %>
+                  <!-- include the sale tag -->
                   <%- include("partials/sale") %>
+                  <!-- include the sale tag end -->
+                  <% } %>
+                  <!-- setting the new and sale tags -->
+                  <% if (x == 1) { %>
+                  <!-- include the new tag -->
+                  <%- include("partials/new") %>
+                  <!-- include the new tag end -->
+                  <% } %>
                   <div class="product_content">
                     <div class="product_title">
-                      <a href="/product">Beats Solo Pro</a>
+                      <a href="/productid=<%= i._id %>"><%= i.name %></a>
                     </div>
-                    <div class="product_price">$670</div>
+                    <div class="product_price">$<%= i.newCost %></div>
                   </div>
                 </div>
 
-                <!-- Product -->
-                <div class="product">
+                <% x += 1 %>
+
+                <!-- increment x value -->
+                <% }) %>
+
+                <!-- <div class="product">
                   <div class="product_image">
                     <img
                       src="https://cdn.shopify.com/s/files/1/0153/8863/products/beats-by-dre-powerbeats-pro-black-headphone-zone-13980296151103_2000x.jpg?v=1579674014"
@@ -172,7 +187,6 @@
                   </div>
                 </div>
 
-                <!-- Product -->
                 <div class="product">
                   <div class="product_image">
                     <img
@@ -188,7 +202,6 @@
                   </div>
                 </div>
 
-                <!-- Product -->
                 <div class="product">
                   <div class="product_image">
                     <img
@@ -204,7 +217,6 @@
                   </div>
                 </div>
 
-                <!-- Product -->
                 <div class="product">
                   <div class="product_image">
                     <img
@@ -220,7 +232,6 @@
                   </div>
                 </div>
 
-                <!-- Product -->
                 <div class="product">
                   <div class="product_image">
                     <img
@@ -237,7 +248,6 @@
                   </div>
                 </div>
 
-                <!-- Product -->
                 <div class="product">
                   <div class="product_image">
                     <img
@@ -253,7 +263,6 @@
                   </div>
                 </div>
 
-                <!-- Product -->
                 <div class="product">
                   <div class="product_image">
                     <img
@@ -268,7 +277,7 @@
                     </div>
                     <div class="product_price">$670</div>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -357,6 +366,7 @@
     <script src="plugins/easing/easing.js"></script>
     <script src="plugins/parallax-js-master/parallax.min.js"></script>
     <script src="js/custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
     <script src="js/cart-state.js" defer></script>
   </body>
 </html>

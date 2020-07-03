@@ -111,7 +111,7 @@
                         <!-- Product Content -->
                         <div class="col-lg-6">
                             <div class="details_content">
-                                <div class="details_name">Beats Powerbeats Pro</div>
+                                <div class="details_name"><%= data.name %></div>
                                 <div class="details_discount">$<%= data.oldCost %></div>
                                 <div class="details_price">$<%= data.newCost %></div>
 
@@ -121,7 +121,7 @@
                                     <% if (data.avail) { %>
                                         <span>In Stock</span>
                                     <% } else { %>
-                                        <span style="color: red;">Out Of Stock</span>
+                                        <span style="color: red;">Out of Stock</span>
                                     <% } %>
                                 </div>
                                 <div class="details_text">
@@ -207,7 +207,7 @@
                             </div>
                             <div class="description_text">
                                 <% data.Desc.forEach((i) => { %>
-                                    <h3><%= i.title %></h3>
+                                    <h3><%= i.title.toUpperCase() %></h3>
                                     <p>
                                         <%= i.body %>
                                     </p>
@@ -416,6 +416,7 @@
         <script src="plugins/easing/easing.js"></script>
         <script src="plugins/parallax-js-master/parallax.min.js"></script>
         <script src="js/product.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
         <script src="js/cart-update.js" defer></script>
         
     </body>

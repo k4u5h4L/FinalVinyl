@@ -4,14 +4,33 @@ dotenv.config();
 import express, { Application, Request, Response } from "express";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
+import cookieParser from "cookie-parser";
+import cookie from "cookie";
+import Cookies from "js-cookie";
+
+// import product from "./product";
+// import featured from "./featured";
 
 const app: Application = express();
 const PORT = 3000;
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cookieParser());
 
 app.set("view engine", "ejs");
+
+const server = app.listen(process.env.PORT || PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+
+const io = require("socket.io")(server);
+
+// interface returnPdts {
+//   name: string;
+//   imgSrc: string;
+//   cost: number;
+// }
 
 const DBName = `finalvinylDB`;
 
@@ -30,6 +49,7 @@ const productSchema = new mongoose.Schema({
   about: [String],
   Desc: [{ title: String, body: String }],
   type: String,
+  featured: Boolean,
 });
 
 const Product = mongoose.model("Product", productSchema);
@@ -37,38 +57,29 @@ const Product = mongoose.model("Product", productSchema);
 // setting routes
 
 app.get("/", (req: Request, res: Response) => {
-  res.render("index");
+  Product.find({ featured: true }, (err, pdt) => {
+    if (err) {
+      res.send("Error getting products");
+      console.log(err);
+    } else {
+      // console.log(pdt);
+
+      // let toSend;
+      // for (const i in pdt) {
+      //   toSend = featured(pdt[i]);
+      // }
+
+      res.render("index", { data: pdt });
+    }
+  });
 });
 
 app.get("/categories", (req: Request, res: Response) => {
   res.render("categories");
 });
 
-// the below is test data to store in the database
-
-// const newPdt = new Product({
-//   name: "beats",
-//   imgSrc: ["abc", "def"],
-//   oldCost: 4,
-//   newCost: 6,
-//   avail: true,
-//   about: ["abc", "def"],
-//   Desc: [
-//     {
-//       title: "hello",
-//       body: "there",
-//     },
-//     {
-//       title: "hey",
-//       body: "there",
-//     },
-//   ],
-//   type: "earphones",
-// });
-
-// newPdt.save();
-
 app.get("/productid=:pdtId", (req: Request, res: Response) => {
+  // product(Product, req, res);
   const requestedPdtId = req.params.pdtId.trim();
 
   // console.log(requestedPdtId);
@@ -82,8 +93,6 @@ app.get("/productid=:pdtId", (req: Request, res: Response) => {
       res.render("product", { data: pdt });
     }
   });
-
-  // res.render("product", { cartValue: 1 });
 });
 
 app.post("/product", (req: Request, res: Response) => {
@@ -91,6 +100,9 @@ app.post("/product", (req: Request, res: Response) => {
 });
 
 app.get("/cart", (req: Request, res: Response) => {
+  const thatCookie = req.cookies.test;
+  console.log(JSON.parse(thatCookie));
+
   res.render("cart");
 });
 
@@ -118,6 +130,4 @@ app.get("*", (req: Request, res: Response) => {
   res.send("Not found this page.");
 });
 
-app.listen(process.env.PORT || PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+// ------------------------------------------
