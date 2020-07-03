@@ -37,11 +37,11 @@ const Product = mongoose.model("Product", productSchema);
 // setting routes
 
 app.get("/", (req: Request, res: Response) => {
-  res.render("index", { cartValue: 1 });
+  res.render("index");
 });
 
 app.get("/categories", (req: Request, res: Response) => {
-  res.render("categories", { cartValue: 1 });
+  res.render("categories");
 });
 
 const newPdt = new Product({
@@ -77,7 +77,7 @@ app.get("/productid=:pdtId", (req: Request, res: Response) => {
       console.log(err);
     } else {
       // console.log(pdt);
-      res.render("product", { data: pdt, cartValue: 1 });
+      res.render("product", { data: pdt });
     }
   });
 
@@ -89,15 +89,15 @@ app.post("/product", (req: Request, res: Response) => {
 });
 
 app.get("/cart", (req: Request, res: Response) => {
-  res.render("cart", { cartValue: 1 });
+  res.render("cart");
 });
 
 app.get("/checkout", (req: Request, res: Response) => {
-  res.render("checkout", { cartValue: 1 });
+  res.render("checkout");
 });
 
 app.get("/contact", (req: Request, res: Response) => {
-  res.render("contact", { cartValue: 1 });
+  res.render("contact");
 });
 
 app.post("/contact", (req: Request, res: Response) => {
@@ -109,7 +109,7 @@ app.post("/contact", (req: Request, res: Response) => {
   };
   console.log(formData);
 
-  res.render("thankyou", { cartValue: 1 });
+  res.render("thankyou");
 });
 
 app.get("*", (req: Request, res: Response) => {

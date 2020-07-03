@@ -145,7 +145,7 @@
                                 </div>
 
                                 <!-- Product Quantity -->
-                                <form action="/product" method="POST">
+                                <!-- <form action="#" method="POST"> -->
                                     <div class="product_quantity_container">
                                         <div class="product_quantity clearfix">
                                             <span>Qty</span>
@@ -167,9 +167,11 @@
                                             </div>
                                         </div>
                                         <!--<div class="button cart_button"><a href="#">Add to cart</a></div>-->
-                                        <button class="btn btn-1 btn-1e">Add to cart</button>
+                                        <% let itemId = data._id %>
+                                        <button onclick="addCart()" id="cartBtn" class="btn btn-1 btn-1e">Add to cart</button>
+                                        <p id="itemID" style="visibility: hidden"><%= itemId %></p>
                                     </div>
-                            </form>
+                                <!-- </form> -->
 
                                 <!-- Share -->
                                 <!--<div class="details_share">
