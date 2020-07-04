@@ -3,8 +3,9 @@ dotenv.config();
 
 import express, { Application, Request, Response } from "express";
 import bodyParser from "body-parser";
-import mongoose from "mongoose";
+import mongoose, { mongo } from "mongoose";
 import cookieParser from "cookie-parser";
+import { resolveCname } from "dns";
 
 // import cookie from "cookie";
 // import Cookies from "js-cookie";
@@ -51,7 +52,16 @@ const productSchema = new mongoose.Schema({
   featured: Boolean,
 });
 
+const feedBackSchema = new mongoose.Schema({
+  firstName: String,
+  lastName: String,
+  email: String,
+  message: String,
+});
+
 const Product = mongoose.model("Product", productSchema);
+
+const Feedback = mongoose.model("Feedback", feedBackSchema);
 
 // setting routes
 
@@ -74,7 +84,38 @@ app.get("/", (req: Request, res: Response) => {
 });
 
 app.get("/categories", (req: Request, res: Response) => {
-  res.render("categories");
+  // const q = Product.find({}).sort("date", -1).limit(4);
+  // q.execFind((err: any, pdt: any) => {
+  //   // `posts` will be of length 4
+  //   if (err) {
+  //     res.send("Error");
+  //     console.log(err);
+  //   } else {
+  //     res.render("categories", { data: pdt });
+  //   }
+  // });
+
+  Product.find({}, (err, pdt) => {
+    if (err) {
+      res.send("Error");
+      console.log(err);
+    } else {
+      res.render("categories", { data: pdt });
+    }
+  }).limit(12);
+});
+
+app.get("/categories=:typeDev", (req: Request, res: Response) => {
+  const requestedType = req.params.typeDev.trim();
+
+  Product.find({ type: requestedType }, (err, pdt) => {
+    if (err) {
+      res.send("Error");
+      console.log(err);
+    } else {
+      res.render("categories", { data: pdt });
+    }
+  }).limit(12);
 });
 
 app.get("/productid=:pdtId", (req: Request, res: Response) => {
@@ -85,11 +126,24 @@ app.get("/productid=:pdtId", (req: Request, res: Response) => {
 
   Product.findById(requestedPdtId, (err, pdt) => {
     if (err) {
-      res.send("Error getting this product.");
+      res.write("Error getting this product.");
       console.log(err);
     } else {
       // console.log(pdt);
-      res.render("product", { data: pdt });
+      const typeOfDevice: any = pdt;
+      const searchType = typeOfDevice.type;
+      Product.find(
+        { type: searchType, _id: { $ne: typeOfDevice._id } },
+        (err, pdt2) => {
+          if (err) {
+            res.send("Error getting this pdt");
+            console.log(err);
+          } else {
+            // console.log(pdt2);
+            res.render("product", { data: pdt, related: pdt2 });
+          }
+        }
+      ).limit(4);
     }
   });
 });
@@ -139,13 +193,14 @@ app.get("/contact", (req: Request, res: Response) => {
 });
 
 app.post("/contact", (req: Request, res: Response) => {
-  const formData = {
+  const user = new Feedback({
     firstName: req.body.fName,
     lastName: req.body.lName,
     email: req.body.email,
     message: req.body.message,
-  };
-  console.log(formData);
+  });
+
+  user.save();
 
   res.render("thankyou");
 });

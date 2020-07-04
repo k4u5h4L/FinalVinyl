@@ -314,19 +314,22 @@
                         <div class="col">
                             <div class="product_grid">
                                 <!-- Product -->
+
+                                <% for (const j in related) {  %>
                                 <div class="product">
-                                    <div class="product_image"><img src="https://cdn.shopify.com/s/files/1/0153/8863/products/bose-noise-cancelling-headphones-700-black-headphone-zone-13980366438463_2000x.jpg?v=1579661252" alt="" /></div>
+                                    <div class="product_image"><img src="<%= related[j].imgSrc[0] %>" alt="pdt-image" /></div>
                                     <%- include("partials/new") %>
                                     <div class="product_content">
                                         <div class="product_title">
-                                            <a href="/product">Bose NC Headphones 700</a>
+                                            <a href="/productid=<%= related[j]._id %>"><%= related[j].name %></a>
                                         </div>
-                                        <div class="product_price">$670</div>
+                                        <div class="product_price">$<%= related[j].newCost %></div>
                                     </div>
                                 </div>
 
-                                <!-- Product -->
-                                <div class="product">
+                                <% } %>
+
+                                <!-- <div class="product">
                                     <div class="product_image"><img src="https://cdn.shopify.com/s/files/1/0153/8863/products/beats-by-dre-solo-pro-black-headphone-zone-13980035219519_2000x.jpg?v=1579706821" alt="" /></div>
                                     <%- include("partials/sale") %>
                                     <div class="product_content">
@@ -337,7 +340,6 @@
                                     </div>
                                 </div>
 
-                                <!-- Product -->
                                 <div class="product">
                                     <div class="product_image"><img src="https://cdn.shopify.com/s/files/1/0153/8863/products/sony-wh-1000xm3-black-headphone-zone-4090533871679_2000x.jpg?v=1580374861" alt="" /></div>
                                     <div class="product_content">
@@ -348,7 +350,6 @@
                                     </div>
                                 </div>
 
-                                <!-- Product -->
                                 <div class="product">
                                     <div class="product_image"><img src="https://cdn.shopify.com/s/files/1/0153/8863/products/beats-by-dr-dre-studio-3-wireless-grey-headphone-zone-13979580334143_2000x.jpg?v=1579685612" alt="" /></div>
                                     <div class="product_content">
@@ -357,7 +358,7 @@
                                         </div>
                                         <div class="product_price">$330</div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
