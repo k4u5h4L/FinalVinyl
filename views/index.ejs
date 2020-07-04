@@ -139,37 +139,36 @@
             <div class="col">
               <div class="product_grid">
                 <!-- Product -->
-                <% let x = 0; %>
+
                 <!-- setting the loop -->
-                <% data.forEach((i) => { %>
+                <% for (const i in data) { %>
 
                 <div class="product">
                   <div class="product_image">
-                    <img src="<%= i.imgSrc[0] %>" alt="product image" />
+                    <img src="<%= data[i].imgSrc[0] %>" alt="product image" />
                   </div>
-                  <% if (x == 0) { %>
+                  <% if (i == 0) { %>
                   <!-- include the sale tag -->
                   <%- include("partials/sale") %>
                   <!-- include the sale tag end -->
                   <% } %>
                   <!-- setting the new and sale tags -->
-                  <% if (x == 1) { %>
+                  <% if (i == 1) { %>
                   <!-- include the new tag -->
                   <%- include("partials/new") %>
                   <!-- include the new tag end -->
                   <% } %>
                   <div class="product_content">
                     <div class="product_title">
-                      <a href="/productid=<%= i._id %>"><%= i.name %></a>
+                      <a href="/productid=<%= data[i]._id %>"
+                        ><%= data[i].name %></a
+                      >
                     </div>
-                    <div class="product_price">$<%= i.newCost %></div>
+                    <div class="product_price">$<%= data[i].newCost %></div>
                   </div>
                 </div>
 
-                <% x += 1 %>
-
-                <!-- increment x value -->
-                <% }) %>
+                <% } %>
 
                 <!-- <div class="product">
                   <div class="product_image">

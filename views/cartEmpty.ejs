@@ -73,34 +73,33 @@
             <div class="col">
               <!-- Cart Item -->
               <!-- ##################################################################### -->
-              <% for (const i in data) { %>
+
               <div
                 class="cart_item d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-start"
               >
+                <h2>Cart Empty!</h2>
                 <!-- Name -->
-                <div
+                <!-- <div
                   class="cart_item_product d-flex flex-row align-items-center justify-content-start"
                 >
-                  <div class="cart_item_image">
+                  <!-- <div class="cart_item_image">
                     <div>
-                      <img src="<%= data[i].imgSrc[0] %>" alt="product image" />
+                      <img src="" alt="product image" />
                     </div>
-                  </div>
-                  <div class="cart_item_name_container">
+                  </div> -->
+                <!-- <div class="cart_item_name_container">
                     <div class="cart_item_name">
-                      <a href="/productid=<%= data[i]._id %>"
-                        ><%= data[i].name %></a
-                      >
+                      <a href="/productid=#"></a>
                     </div>
                     <div class="cart_item_edit">
-                      <a href="#" id="<%= data[i]._id %>" onclick="rmItem(this)"
+                      <a href="#" id="" onclick="rmItem(this)"
                         >Remove Product</a
                       >
                     </div>
                   </div>
-                </div>
+                </div> -->
                 <!-- Price -->
-                <div class="cart_item_price">$<%= data[i].newCost %></div>
+                <!-- <div class="cart_item_price">$</div> -->
                 <!-- Quantity -->
                 <!-- <div class="cart_item_quantity">
                   <div class="product_quantity_container">
@@ -130,12 +129,10 @@
                   </div>
                 </div> -->
                 <!-- Total -->
-                <% let cost = parseInt(data[i].newCost) %>
-                <div id="quantityOfItems" class="cart_item_total">
-                  $<%= cost %>
-                </div>
+
+                <!-- <div id="quantityOfItems" class="cart_item_total"></div> -->
               </div>
-              <% } %>
+
               <!-- ##################################################################### -->
             </div>
           </div>
@@ -149,7 +146,7 @@
                 </div>
                 <div class="cart_buttons_right ml-lg-auto">
                   <div class="button clear_cart_button">
-                    <a href="#" onclick="clearEverything()">Clear cart</a>
+                    <a href="#">Clear cart</a>
                   </div>
                   <!-- <div class="button update_cart_button"><a href="#">Update cart</a></div> -->
                 </div>
@@ -273,11 +270,5 @@
     <script src="js/subtotal.js"></script>
     <script src="js/delivery-status.js"></script>
     <script src="js/rm-clear.js"></script>
-    <script>
-      const clearEverything = () => {
-        Cookies.remove("cartItems");
-        window.location.reload();
-      };
-    </script>
   </body>
 </html>

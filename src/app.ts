@@ -99,19 +99,23 @@ app.post("/product", (req: Request, res: Response) => {
 });
 
 app.get("/cart", (req: Request, res: Response) => {
-  const pdtCookie = JSON.parse(req.cookies.cartItems);
-  // console.log(pdtCookie);
+  if (req.cookies.cartItems == null) {
+    res.render("cartEmpty");
+  } else {
+    const pdtCookie = JSON.parse(req.cookies.cartItems);
+    // console.log(pdtCookie);
 
-  Product.find({ _id: pdtCookie.itemIds }, (err, pdt) => {
-    if (err) {
-      res.send("Error in sending the data.");
-      console.log(err);
-    } else {
-      // console.log(pdt);
+    Product.find({ _id: pdtCookie.itemIds }, (err, pdt) => {
+      if (err) {
+        res.send("Error in sending the data.");
+        console.log(err);
+      } else {
+        // console.log(pdt);
 
-      res.render("cart", { data: pdt });
-    }
-  });
+        res.render("cart", { data: pdt });
+      }
+    });
+  }
 });
 
 app.get("/checkout", (req: Request, res: Response) => {

@@ -33,7 +33,7 @@ const deliStatus = () => {
   }
 
   let grandTotal = parseFloat(sumTotal) + parseFloat(deliCharges);
-  console.log(grandTotal);
+  // console.log(grandTotal);
   subtotal[2].innerHTML = `$${grandTotal}`;
 };
 

@@ -16,7 +16,7 @@ subtotalNo = parseFloat(subtotalNo.trim().replace("$", ""));
 
 // console.log(subtotalNo);
 
-if (typeof deliFee == "string") {
+if (deliFee == "Free") {
   deliFee = 0;
 } else {
   deliFee = parseFloat(deliFee.trim().replace("$", ""));
@@ -24,7 +24,8 @@ if (typeof deliFee == "string") {
 
 // console.log(deliFee);
 
-grandTotalNo.innerHTML = `$${subtotalNo + deliFee}`;
+grandTotalNo.innerHTML = `$${parseFloat(subtotalNo) + parseFloat(deliFee)}`;
+// console.log(`$${parseFloat(subtotalNo) + parseFloat(deliFee)}`);
 
 if (deliFee == 0) {
   deliFee = "Free";
