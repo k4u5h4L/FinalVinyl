@@ -5,7 +5,6 @@ import express, { Application, Request, Response } from "express";
 import bodyParser from "body-parser";
 import mongoose, { mongo } from "mongoose";
 import cookieParser from "cookie-parser";
-import { resolveCname } from "dns";
 
 // import cookie from "cookie";
 // import Cookies from "js-cookie";
@@ -34,10 +33,13 @@ app.listen(process.env.PORT || PORT, () => {
 
 const DBName = `finalvinylDB`;
 
-mongoose.connect(`mongodb://localhost:27017/${DBName}`, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(
+  `mongodb+srv://admin-kaushal:${process.env.MONGO_PASSWD}@cluster0.qyrnk.mongodb.net/${DBName}`,
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+);
 mongoose.set("useCreateIndex", true);
 
 const productSchema = new mongoose.Schema({
@@ -203,6 +205,19 @@ app.post("/contact", (req: Request, res: Response) => {
   user.save();
 
   res.render("thankyou");
+});
+
+app.get("/login", (req: Request, res: Response) => {
+  res.render("login");
+});
+
+app.post("/login", (req: Request, res: Response) => {
+  const loginData = {
+    email: req.body.username,
+    passwd: req.body.passwd,
+  };
+
+  res.send(loginData);
 });
 
 app.get("*", (req: Request, res: Response) => {
