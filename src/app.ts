@@ -34,7 +34,8 @@ app.listen(process.env.PORT || PORT, () => {
 const DBName = `finalvinylDB`;
 
 mongoose.connect(
-  `mongodb+srv://admin-kaushal:${process.env.MONGO_PASSWD}@cluster0.qyrnk.mongodb.net/${DBName}`,
+  // `mongodb+srv://admin-kaushal:${process.env.MONGO_PASSWD}@cluster0.qyrnk.mongodb.net/${DBName}`,
+  `mongodb://localhost:27017/${DBName}`,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
