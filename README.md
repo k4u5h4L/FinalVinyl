@@ -14,7 +14,7 @@ Made with nodejs, ejs, express, mongodb, and front end tools like HTML, CSS and 
 - Clone this repo.
 
 ```
-git clone https://github.com/theParanoidScripts/FinalVinyl.git
+git clone https://github.com/k4u5h4L/FinalVinyl.git
 ```
 
 - Change directory and install dependencies.
